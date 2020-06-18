@@ -1,0 +1,40 @@
+package trabalhopratico5;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class TrabalhoPratico5 {
+
+    public static void main(String[] args) {
+       
+        
+        Scanner in = new Scanner(System.in);
+        
+        //Temos aqui um vetor de tamanho fixo de 1 a 10 
+        int[] vetor= {1,2,3,4,5,6,7,8,9,10};
+        
+        //Impressão do vetor para ficar mais didático
+        System.out.println(Arrays.toString(vetor));
+        
+        //O usuário digita o número o qual ele queiro procurar dentro do vetor   
+        System.out.println("Digite um número para ser encontrado no vetor: ");
+        int num = in.nextInt(); //lendo do teclado o número que o usuário irá digitar
+        
+        //Se o número digitado pelo usuário estiver em algum índice do vetor (No caso o índice vai de 0 até 9)
+        if (num >= vetor[0] && num <=vetor[9]) 
+            System.out.println("Sucesso"); //Se o número for encontrado = Sucesso
+        else
+            System.out.println("Insucesso"); // Se não for encontrado = Insucesso
+                
+    }
+}    
+
+
+//**********************   FUNÇÃO DE COMPLEXIDADE  ********************
+
+/*
+A funçaõ de complexidade do algoritmo seria O(1), pois independente do tamanho do número atribuído
+à variável "num", o "if" írá verificar sempre, neste caso, se o número está entre as posíções do índice 0 e o índice 9.  
+Sendo assim teremos um valor de tempo constante para este algoritmo.
+*/
